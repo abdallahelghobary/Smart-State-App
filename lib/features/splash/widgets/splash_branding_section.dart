@@ -10,26 +10,28 @@ class SplashBrandingSection extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.sizeOf(context);
     final isCompact = size.height < 600 || size.width < 360;
-    final logoSize = isCompact ? 56.0 : 80.0;
+    final logoSize = isCompact ? 64.0 : 80.0;
+    
     final titleStyle = TextStyle(
-      fontSize: isCompact ? 24 : 32,
+      fontSize: isCompact ? 26 : 32,
       fontWeight: FontWeight.bold,
-      color: AppColors.textPrimary,
+      color: Colors.white,
+      letterSpacing: 0.5,
     );
     final subtitleStyle = TextStyle(
       fontSize: isCompact ? 10 : 12,
-      fontWeight: FontWeight.w500,
+      fontWeight: FontWeight.w700,
       color: AppColors.accent,
-      letterSpacing: 1.2,
+      letterSpacing: 2.0,
     );
 
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
         SplashLogo(size: logoSize),
-        SizedBox(height: isCompact ? 12 : 20),
+        SizedBox(height: isCompact ? 16 : 24),
         Text('Smart State', style: titleStyle),
-        SizedBox(height: isCompact ? 4 : 8),
+        SizedBox(height: isCompact ? 6 : 10),
         Text('INTELLIGENT GOVERNANCE', style: subtitleStyle),
       ],
     );

@@ -6,13 +6,13 @@ abstract final class AppTheme {
   AppTheme._();
 
   static ThemeData get light => ThemeData(
-        useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: AppColors.primary,
-          primary: AppColors.primary,
-          surface: AppColors.backgroundWhite,
-          brightness: Brightness.light,
-        ),
-        scaffoldBackgroundColor: AppColors.backgroundWhite,
-      );
+    useMaterial3: true,
+    colorScheme: ColorScheme.fromSeed(
+      seedColor: AppColors.primary,
+      primary: AppColors.primary,
+      surface: AppColors.backgroundWhite,
+      brightness: Brightness.light,
+    ),
+    scaffoldBackgroundColor: AppColors.backgroundWhite,
+  );
 }

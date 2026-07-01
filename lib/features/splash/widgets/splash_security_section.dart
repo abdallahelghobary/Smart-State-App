@@ -8,27 +8,36 @@ class SplashSecuritySection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isCompact = MediaQuery.sizeOf(context).height < 600;
-    final textStyle = TextStyle(
-      fontSize: isCompact ? 10 : 11,
-      color: AppColors.textTertiary,
-      letterSpacing: 0.8,
+    
+    final labelStyle = TextStyle(
+      fontSize: isCompact ? 9 : 10,
+      fontWeight: FontWeight.w600,
+      color: Colors.white.withValues(alpha: 0.35),
+      letterSpacing: 1.5,
+    );
+    
+    final statusStyle = TextStyle(
+      fontSize: isCompact ? 10 : 12,
+      fontWeight: FontWeight.w400,
+      color: Colors.white.withValues(alpha: 0.5),
+      letterSpacing: 0.5,
     );
 
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Text('SECURE CONNECTION ESTABLISHED', style: textStyle),
+        Text('SECURE CONNECTION ESTABLISHED', style: labelStyle),
         SizedBox(height: isCompact ? 6 : 8),
         Row(
           mainAxisSize: MainAxisSize.min,
           children: [
             Icon(
-              Icons.shield_outlined,
-              size: isCompact ? 18 : 22,
+              Icons.gpp_good_outlined, // Shield with a checkmark
+              size: isCompact ? 16 : 18,
               color: AppColors.accent,
             ),
-            const SizedBox(width: 8),
-            Text('Encrypted End-to-End', style: textStyle),
+            const SizedBox(width: 6),
+            Text('Encrypted End-to-End', style: statusStyle),
           ],
         ),
       ],
