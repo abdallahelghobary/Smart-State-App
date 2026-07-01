@@ -33,4 +33,14 @@ abstract final class AppColors {
   static const Color dotInactive = Color(0xFF334155);
   static const Color cardBorder = Color(0xFF25454A);
   static const Color cardBackground = Color(0xFF152A2D);
+
+  // Login screen
+  static const Color loginBackground = Color(0xFF0D1F22);
+  static const Color inputBackground = Color(0xFF152A2D);
+  static const Color inputBorder = Color(0xFF243E42);
+  static const Color inputBorderFocused = Color(0xFF2EE8D1);
+  static const Color dividerColor = Color(0xFF1E3438);
+  static const Color socialButtonBorder = Color(0xFF1E3438);
+  static const Color forgotPasswordColor = Color(0xFF2EE8D1);
+  static const Color createAccountColor = Color(0xFF2EE8D1);
 }

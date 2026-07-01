@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smart_state_app/core/theme/app_colors.dart';
+import 'package:smart_state_app/features/login/presentation/login_screen.dart';
 import 'package:smart_state_app/features/onboarding/widgets/onboarding_content_section.dart';
 import 'package:smart_state_app/features/onboarding/widgets/onboarding_footer.dart';
 import 'package:smart_state_app/features/onboarding/widgets/onboarding_header.dart';
@@ -31,6 +32,7 @@ class _OnboardingViewState extends State<OnboardingView> {
       description:
           'Discover the best apartments near your university with verified '
           'listings and neighborhood guides.',
+      imageAsset: 'assets/badRoom.png',
     ),
   ];
 
@@ -39,8 +41,15 @@ class _OnboardingViewState extends State<OnboardingView> {
   void _onNext() {
     if (_currentIndex < _pages.length - 1) {
       setState(() => _currentIndex++);
+    } else if (widget.onComplete != null) {
+      widget.onComplete!();
     } else {
-      widget.onComplete?.call();
+      // Default: navigate to login screen
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute<void>(
+          builder: (_) => const LoginScreen(),
+        ),
+      );
     }
   }
 
@@ -61,7 +70,7 @@ class _OnboardingViewState extends State<OnboardingView> {
                   children: [
                     OnboardingHeroSection(
                       imageUrl: widget.imageUrl,
-                      imageAsset: widget.imageAsset,
+                      imageAsset: page.imageAsset ?? widget.imageAsset,
                     ),
                     OnboardingContentSection(
                       title: page.title,
@@ -84,8 +93,13 @@ class _OnboardingViewState extends State<OnboardingView> {
 }
 
 class _OnboardingPage {
-  const _OnboardingPage({required this.title, required this.description});
+  const _OnboardingPage({
+    required this.title,
+    required this.description,
+    this.imageAsset,
+  });
 
   final String title;
   final String description;
+  final String? imageAsset;
 }
