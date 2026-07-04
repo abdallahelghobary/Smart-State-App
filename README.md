@@ -12,16 +12,23 @@ A few resources to get you started if this is your first Flutter project:
 ## 📱 App Preview
 
 
-| Splash Screen | Skelitonizer Loading  | Home View |
+| Splash Screen | On Boarding  | Sign In |
 | :---: | :---: | :---: |
 | 
-<img  src="https://github.com/user-attachments/assets/19ac203a-25dd-47d9-9b00-88bd8baeb89a" width="220" /> | <img src="https://github.com/user-attachments/assets/759c131c-c374-4b9d-b5b8-e292580017d2" width="220"/> | <img src="https://github.com/user-attachments/assets/35c95e86-869f-4301-a49d-c919923779e1" width="220"/> |
+<img  src="https://github.com/user-attachments/assets/19ac203a-25dd-47d9-9b00-88bd8baeb89a" width="220" /> |
+<img width="220" src="https://github.com/user-attachments/assets/69a2ead6-de6c-48a6-9b04-91a69fd78025" />
+|
+<img width="220" src="https://github.com/user-attachments/assets/00578b5b-b32c-44c7-b8db-71586ac59cd4" />|
 
-| Technology View | Web View |
+| Create Account | Web View |
 | :---: | :---: |
-| <img src="https://github.com/user-attachments/assets/5fad4a37-5b89-4618-bcb8-30786652d7d8" width="220"/> | <img src="https://github.com/user-attachments/assets/8e91d4f7-8e4c-4a7c-929b-f4520128f876" width="220"/> |
+| <img width="220" src="https://github.com/user-attachments/assets/0a8ff902-be98-4b57-89a6-3e7413af4e00" />
+ |
+<img src="https://github.com/user-attachments/assets/8e91d4f7-8e4c-4a7c-929b-f4520128f876" width="220"/> |
 
 ---
+
+
 
 
 
