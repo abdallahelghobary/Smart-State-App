@@ -12,7 +12,7 @@ A few resources to get you started if this is your first Flutter project:
 ## 📱 App Preview
 
 
-| Splash Screen | On Boarding  | Sign In |
+|    Splash Screen |                  On Boarding  |            Sign In |
 | :---: | :---: | :---: |
 | 
 <img  src="https://github.com/user-attachments/assets/19ac203a-25dd-47d9-9b00-88bd8baeb89a" width="220" /> |
@@ -23,8 +23,6 @@ A few resources to get you started if this is your first Flutter project:
 | Create Account | Web View |
 | :---: | :---: |
 | <img width="220" src="https://github.com/user-attachments/assets/0a8ff902-be98-4b57-89a6-3e7413af4e00" />
- |
-<img src="https://github.com/user-attachments/assets/8e91d4f7-8e4c-4a7c-929b-f4520128f876" width="220"/> |
 
 ---
 
