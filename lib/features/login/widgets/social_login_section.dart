@@ -1,22 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:smart_state_app/core/theme/app_colors.dart';
 
-/// "OR CONTINUE WITH" divider with Google and Apple buttons.
+/// Divider + Google/Apple buttons, used on both Login and Create Account screens.
 class SocialLoginSection extends StatelessWidget {
   const SocialLoginSection({
     super.key,
     this.onGoogleTap,
     this.onAppleTap,
+    this.dividerLabel = 'OR CONTINUE WITH',
   });
 
   final VoidCallback? onGoogleTap;
   final VoidCallback? onAppleTap;
+  final String dividerLabel;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        _DividerRow(),
+        _DividerRow(label: dividerLabel),
         const SizedBox(height: 20),
         Row(
           children: [
@@ -43,20 +45,20 @@ class SocialLoginSection extends StatelessWidget {
 }
 
 class _DividerRow extends StatelessWidget {
+  const _DividerRow({required this.label});
+  final String label;
+
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Expanded(
-          child: Divider(
-            color: AppColors.dividerColor,
-            thickness: 1,
-          ),
+          child: Divider(color: AppColors.dividerColor, thickness: 1),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 12),
           child: Text(
-            'OR CONTINUE WITH',
+            label,
             style: TextStyle(
               fontSize: 10,
               fontWeight: FontWeight.w600,
@@ -66,10 +68,7 @@ class _DividerRow extends StatelessWidget {
           ),
         ),
         Expanded(
-          child: Divider(
-            color: AppColors.dividerColor,
-            thickness: 1,
-          ),
+          child: Divider(color: AppColors.dividerColor, thickness: 1),
         ),
       ],
     );

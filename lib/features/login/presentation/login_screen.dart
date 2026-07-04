@@ -4,6 +4,7 @@ import 'package:smart_state_app/features/login/widgets/account_type_selector.dar
 import 'package:smart_state_app/features/login/widgets/login_logo.dart';
 import 'package:smart_state_app/features/login/widgets/login_text_field.dart';
 import 'package:smart_state_app/features/login/widgets/social_login_section.dart';
+import 'package:smart_state_app/features/signup/presentation/create_account_screen.dart';
 
 /// Full login screen matching the Figma design (node 3311-2).
 class LoginScreen extends StatefulWidget {
@@ -180,7 +181,13 @@ class _LoginScreenState extends State<LoginScreen>
                             alignment: PlaceholderAlignment.baseline,
                             baseline: TextBaseline.alphabetic,
                             child: GestureDetector(
-                              onTap: widget.onCreateAccount,
+                              onTap: widget.onCreateAccount ??
+                                  () => Navigator.of(context).push(
+                                        MaterialPageRoute<void>(
+                                          builder: (_) =>
+                                              const CreateAccountScreen(),
+                                        ),
+                                      ),
                               child: const Text(
                                 'Create an account',
                                 style: TextStyle(
