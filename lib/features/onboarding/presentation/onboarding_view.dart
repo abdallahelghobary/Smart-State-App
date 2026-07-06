@@ -32,7 +32,7 @@ class _OnboardingViewState extends State<OnboardingView> {
       description:
           'Discover the best apartments near your university with verified '
           'listings and neighborhood guides.',
-      imageAsset: 'assets/badRoom.png',
+      imageAsset: 'assets/images/badRoom.png',
     ),
   ];
 
@@ -46,9 +46,7 @@ class _OnboardingViewState extends State<OnboardingView> {
     } else {
       // Default: navigate to login screen
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute<void>(
-          builder: (_) => const LoginScreen(),
-        ),
+        MaterialPageRoute<void>(builder: (_) => const LoginScreen()),
       );
     }
   }
