@@ -22,7 +22,7 @@ A few resources to get you started if this is your first Flutter project:
 
 
 
-|  Create Account |  Home View  | Appartment Details |
+|  Create Account | | Appartment Details |
 | :---: | :---: | :---: |
 | 
 <img width="220" src="https://github.com/user-attachments/assets/0a8ff902-be98-4b57-89a6-3e7413af4e00" />|
